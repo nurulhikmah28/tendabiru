@@ -77,19 +77,19 @@
                   </div>
 
 
-                  <div class="form-group row">
+                  <!-- <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Meta Deskripsi</label>
                     <div class="col-sm-10">
                       <input type='text' class='form-control' name='des' value="<?= $record['meta_deskripsi'] ?>">
                     </div>
-                  </div>
+                  </div> -->
 
-                  <div class="form-group row">
+                  <!-- <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Meta Keyword</label>
                     <div class="col-sm-10">
                       <input type='text' class='form-control' name='key' value="<?= $record['meta_keyword'] ?>">
                     </div>
-                  </div>
+                  </div> -->
 
 
                   <div class="form-group row">
@@ -120,14 +120,14 @@
                     </div>
                   </div>
 
-                  <div class="form-group row">
+                  <!-- <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Google Maps</label>
                     <div class="col-sm-10">
 
                       <textarea class='form-control' name="maps" rows="2"><?= $record['maps'] ?></textarea>
 
                     </div>
-                  </div>
+                  </div> -->
 
 
                   <div class="form-group row">

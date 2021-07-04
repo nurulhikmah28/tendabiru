@@ -87,17 +87,17 @@
           </a>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a href="<?= base_url('admin/tag_artikel') ?>" class="nav-link">
             <i class="far fa-circle nav-icon text-sm"></i>
             <p>Tag Artikel</p>
           </a>
-        </li>
+        </li> -->
 
       </ul>
     </li>
 
-    <li class="nav-item has-treeview">
+    <!-- <li class="nav-item has-treeview">
       <a href="#" class="nav-link">
         <i class="nav-icon fas fa-ad fa-fw"></i>
         <p>
@@ -122,7 +122,7 @@
         </li>
 
       </ul>
-    </li>
+    </li> -->
 
     <li class="nav-item has-treeview">
       <a href="#" class="nav-link">

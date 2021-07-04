@@ -36,6 +36,14 @@
                 </div>
 
                 <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">Confirm Password</label>
+                  <div class="col-sm-6">
+                    <input type='password' class='form-control' name='b2' onkeyup="nospaces(this)">
+                    <small class="font-italic">Kosongkan jika tidak ingin ingin mengubahnya</small>
+                  </div>
+                </div>
+
+                <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Nama Lengkap</label>
                   <div class="col-sm-6">
                     <input type='text' class='form-control' name='c' value='<?= $rows['nama_lengkap'] ?>'>

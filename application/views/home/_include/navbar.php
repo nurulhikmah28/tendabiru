@@ -135,12 +135,17 @@
                                         <?php
                                         $menu = $this->model_menu->menu_main();
                                         foreach ($menu->result_array() as $row) {
+                                            if($this->session->level){
+                                                $menu = $row['nama_menu'] ? $row['nama_menu'] : "";
+                                            }else{
+                                                $menu = $row['nama_menu']=="Konfirmasi Pembayaran" ? "" : $row['nama_menu'];
+                                            }
                                             $dropdown = $this->model_menu->dropdown_menu($row['id_menu'])->num_rows();
                                             if ($dropdown == 0) {
                                         ?>
                                                 <li class="nav-links__item">
                                                     <a class="nav-links__item-link" href="<?= base_url() . $row['link']; ?>">
-                                                        <div class="nav-links__item-body"><?= $row['nama_menu']; ?></div>
+                                                        <div class="nav-links__item-body"><?= $menu; ?></div>
                                                     </a>
                                                 </li>
 

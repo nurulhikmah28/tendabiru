@@ -823,39 +823,48 @@ class Admin extends CI_Controller
 			$this->load->library('upload', $config);
 			$this->upload->do_upload('f');
 			$hasil = $this->upload->data();
-			if ($hasil['file_name'] == '' and $this->input->post('b') == '') {
-				$data = array(
-					'username' => $this->db->escape_str($this->input->post('a')),
-					'nama_lengkap' => $this->db->escape_str($this->input->post('c')),
-					'email' => $this->db->escape_str($this->input->post('d')),
-					'no_telp' => $this->db->escape_str($this->input->post('e')),
-				);
-			} elseif ($hasil['file_name'] != '' and $this->input->post('b') == '') {
-				$data = array(
-					'username' => $this->db->escape_str($this->input->post('a')),
-					'nama_lengkap' => $this->db->escape_str($this->input->post('c')),
-					'email' => $this->db->escape_str($this->input->post('d')),
-					'no_telp' => $this->db->escape_str($this->input->post('e')),
-					'foto' => $hasil['file_name'],
-				);
-			} elseif ($hasil['file_name'] == '' and $this->input->post('b') != '') {
-				$data = array(
-					'username' => $this->db->escape_str($this->input->post('a')),
-					'password' => password_hash($this->input->post('b'), PASSWORD_DEFAULT),
-					'nama_lengkap' => $this->db->escape_str($this->input->post('c')),
-					'email' => $this->db->escape_str($this->input->post('d')),
-					'no_telp' => $this->db->escape_str($this->input->post('e')),
-				);
-			} elseif ($hasil['file_name'] != '' and $this->input->post('b') != '') {
-				$data = array(
-					'username' => $this->db->escape_str($this->input->post('a')),
-					'password' => password_hash($this->input->post('b'), PASSWORD_DEFAULT),
-					'nama_lengkap' => $this->db->escape_str($this->input->post('c')),
-					'email' => $this->db->escape_str($this->input->post('d')),
-					'no_telp' => $this->db->escape_str($this->input->post('e')),
-					'foto' => $hasil['file_name'],
-				);
+			if($this->input->post('b') == $this->input->post('b2')){
+				if ($hasil['file_name'] == '' and $this->input->post('b') == '') {
+					$data = array(
+						'username' => $this->db->escape_str($this->input->post('a')),
+						'nama_lengkap' => $this->db->escape_str($this->input->post('c')),
+						'email' => $this->db->escape_str($this->input->post('d')),
+						'no_telp' => $this->db->escape_str($this->input->post('e')),
+					);
+				} elseif ($hasil['file_name'] != '' and $this->input->post('b') == '') {
+					$data = array(
+						'username' => $this->db->escape_str($this->input->post('a')),
+						'nama_lengkap' => $this->db->escape_str($this->input->post('c')),
+						'email' => $this->db->escape_str($this->input->post('d')),
+						'no_telp' => $this->db->escape_str($this->input->post('e')),
+						'foto' => $hasil['file_name'],
+					);
+				} elseif ($hasil['file_name'] == '' and $this->input->post('b') != '') {
+					$data = array(
+						'username' => $this->db->escape_str($this->input->post('a')),
+						'password' => password_hash($this->input->post('b'), PASSWORD_DEFAULT),
+						'nama_lengkap' => $this->db->escape_str($this->input->post('c')),
+						'email' => $this->db->escape_str($this->input->post('d')),
+						'no_telp' => $this->db->escape_str($this->input->post('e')),
+					);
+				} elseif ($hasil['file_name'] != '' and $this->input->post('b') != '') {
+					$data = array(
+						'username' => $this->db->escape_str($this->input->post('a')),
+						'password' => password_hash($this->input->post('b'), PASSWORD_DEFAULT),
+						'nama_lengkap' => $this->db->escape_str($this->input->post('c')),
+						'email' => $this->db->escape_str($this->input->post('d')),
+						'no_telp' => $this->db->escape_str($this->input->post('e')),
+						'foto' => $hasil['file_name'],
+					);
+				}
+			}else{
+				$this->session->set_flashdata('message', '
+				<div class="alert alert-danger" role="alert">
+            	<center>Password Tidak Sama</center>
+          		</div>');
+				  redirect('admin/edit_user/' . $this->input->post('id'));
 			}
+			
 			$where = array('username' => $this->input->post('id'));
 			$this->model_app->update('tb_pengguna', $data, $where);
 
