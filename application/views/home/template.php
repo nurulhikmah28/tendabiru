@@ -142,10 +142,10 @@ $iden = $this->db->query("SELECT * FROM tb_web_identitas where id_identitas='1'"
                 </div>
             <?php } ?>
             <!-- slideshow -->
-            <!-- <?php
+            <?php
             if ($this->uri->segment(1) == '' or $this->uri->segment(1) == 'main') {
                 include '_include/slideshow.php';
-            } ?> -->
+            } ?>
             <!-- konten-->
             <div class="container">
                 <?= $konten; ?>

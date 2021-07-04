@@ -162,12 +162,12 @@
           </a>
         </li>
 
-        <!-- <li class="nav-item">
+        <li class="nav-item">
           <a href="<?= base_url('admin/slider') ?>" class="nav-link">
             <i class="far fa-circle nav-icon text-sm"></i>
             <p>Slider</p>
           </a>
-        </li> -->
+        </li>
 
         <!-- <li class="nav-item">
           <a href="<?= base_url('admin/tema') ?>" class="nav-link">
