@@ -22,7 +22,7 @@
                                             <button type='button' class='btn btn-primary btn-xs dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'> <span class='caret'></span> Pilih Waktu </button>
                                             <div class='dropdown-menu' style='border:1px solid #cecece;'>
                                                 <a class='dropdown-item' href='<?= base_url('admin/laporan/') ?>'>Semua</a>
-                                                <a class=' dropdown-item' href='<?= base_url('admin/laporan_1') ?>'>Hari Ini</a>
+                                                <!-- <a class=' dropdown-item' href='<?= base_url('admin/laporan_1') ?>'>Hari Ini</a> -->
                                                 <a class=' dropdown-item' href='<?= base_url('admin/laporan_7') ?>'>7 hari terahir</a>
                                                 <a class=' dropdown-item' href='<?= base_url('admin/laporan_30') ?>'>30 hari terakhir</a>
                                                 <a class=' dropdown-item' href='<?= base_url('admin/laporan_tahun') ?>'>1 tahun terakhir</a>

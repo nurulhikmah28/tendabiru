@@ -457,12 +457,12 @@ class Admin extends CI_Controller
 		$data = array('proses' => $this->uri->segment(4));
 		$where = array('id_penjualan' => $this->uri->segment(3));
 		$this->model_app->update('tb_toko_penjualan', $data, $where);
-		$data['title'] = 'Input Resi';
+		$data['title'] = 'Input Status';
 		$query = $this->model_app->edit('tb_toko_penjualan', array('id_penjualan' => $this->uri->segment(3)))->row_array();
 		$data = array('rows' => $query);
 
 
-		$data['title'] = 'Masukan Resi - Saung Biru Tenda';
+		$data['title'] = 'Masukan Kode Status - Saung Biru Tenda';
 		$this->template->load('admin/template', 'admin/penjualan/view_resi', $data);
 	}
 
@@ -472,11 +472,11 @@ class Admin extends CI_Controller
 		$data = array('proses' => $this->uri->segment(4));
 		$where = array('id_penjualan' => $this->uri->segment(3));
 		$this->model_app->update('tb_toko_penjualan', $data, $where);
-		$data['title'] = 'Input Resi';
+		$data['title'] = 'Input Status';
 		$query = $this->model_app->edit('tb_toko_penjualan', array('id_penjualan' => $this->uri->segment(3)))->row_array();
 		$data = array('rows' => $query);
 
-		$data['title'] = 'Masukan Resi - Saung Biru Tenda';
+		$data['title'] = 'Masukan kode Status - Saung Biru Tenda';
 		$this->template->load('admin/template', 'admin/penjualan/view_resi', $data);
 	}
 

@@ -22,7 +22,7 @@
         <div class="form-group row">
           <label class="col-md-3 col-form-label">Total Bayar</label>
           <div class="col-md-9">
-            <input type='text' name='b' class='form-control' value="<?php if($rows['fullPayment'] == '0'){ echo '';}else{ echo 'Rp '.rupiah($total['total']); }  ?>" required>
+            <input type='text' name='b' class='form-control' value="<?php if($rows['fullPayment'] == '0'){ echo '';}else{ echo $total['total']; }  ?>" required>
           </div>
         </div>
 

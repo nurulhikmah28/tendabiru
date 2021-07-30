@@ -43,7 +43,7 @@
                   } elseif ($row['proses'] == '2') {
                     $proses = '<i class="text-primary">Proses</i>';
                   } elseif ($row['proses'] == '3') {
-                    $proses = '<i class="text-success">Dikirim </i>';
+                    $proses = '<i class="text-success">Close Order </i>';
                   }
 
                   if($row['fullPayment'] == '1'){

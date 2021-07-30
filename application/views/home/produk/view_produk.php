@@ -48,7 +48,7 @@
                                 ?>
                                         <div class="widget-products__item">
                                             <input clas='post' id="id_produk" name="id_produk" type="hidden" value="<?= $rowz['id_produk'] ?>">
-                                            <div class="widget-products__image"><a href="<a href=" <?= base_url('produk/detail/') . $rowz['produk_seo']; ?>><img src="<?= base_url('assets/images/produk/') . $foto_produk1; ?>" alt=""></a></div>
+                                            <div class="widget-products__image"><a href=" <?= base_url('produk/detail/') . $rowz['produk_seo']; ?>"><img src="<?= base_url('assets/images/produk/') . $foto_produk1; ?>" alt=""></a></div>
                                             <div class="widget-products__info">
                                                 <div class="widget-products__name">
                                                     <a href="<?= base_url('produk/detail/') . $rowz['produk_seo']; ?>">

@@ -6,7 +6,7 @@ if ($total['proses'] == '0') {
 } elseif ($total['proses'] == '2') {
   $proses = 'Proses';
 } elseif ($total['proses'] == '3') {
-  $proses = 'Dikirim';
+  $proses = 'Close order';
 }
 ?>
 <div class="wrapper w-100 mx-auto">
@@ -52,7 +52,7 @@ if ($total['proses'] == '0') {
         <?php if ($total['proses'] == '3') { ?>
 
           <tr>
-            <td><small>No. Resi</small></td>
+            <td><small>Kode Status</small></td>
             <td><?= $total['resi']; ?></td>
           </tr>
 

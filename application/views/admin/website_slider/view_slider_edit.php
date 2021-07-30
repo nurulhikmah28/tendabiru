@@ -20,12 +20,12 @@
                   </div>
                 </div>
 
-                <div class="form-group row">
+                <!-- <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Link</label>
                   <div class="col-sm-6">
                     <input type="text" name="link" id="" class="form-control" value="<?= $rows['link'] ?>" required>
                   </div>
-                </div>
+                </div> -->
 
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Keterangan</label>
